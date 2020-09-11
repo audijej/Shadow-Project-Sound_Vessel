@@ -50,15 +50,15 @@ module.exports = function (sequelize, DataTypes) {
 
   });
 
-  Ship.associate = function (models) {
-    Ship.belongsTo(models.Trip, {
-      as: "leader",
-      onDelete: 'NO ACTION',
-      onUpdate: 'CASCADE',
-      allowNull: true
-    }
-    );
-  }
+  // Ship.associate = function (models) {
+  //   Ship.belongsTo(models.Trip, {
+  //     as: "leader",
+  //     onDelete: 'NO ACTION',
+  //     onUpdate: 'CASCADE',
+  //     allowNull: true
+  //   }
+  //   );
+  // }
 
   return Ship;
 }
