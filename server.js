@@ -22,6 +22,18 @@ app.use(passport.session());
 //routes
 app.use(require("./routes"));
 
+// "development": {
+//   "username": "root",
+//   "password": "Silvia13!",
+//   "database": "sound_vessel_traffic_db",
+//   "host": "127.0.0.1",
+//   "port": 3306,
+//   "dialect": "mysql",
+//   "define": {
+//     "timestamps": false
+//   }
+// },
+
 
   db.sequelize.sync().then(function() {
     app.listen(PORT, function() {
