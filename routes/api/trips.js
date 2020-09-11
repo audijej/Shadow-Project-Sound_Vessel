@@ -71,6 +71,8 @@ router.route("/").post(function(req, res) {
         end_sail_date: req.body.end_sail_date
     }).then(function(dbTrip) {
         res.json(dbTrip);
+    }).catch(err => {
+        res.status(401).json(err);
     });
 });
 //DELETE route for deleting trips

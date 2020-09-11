@@ -36,7 +36,6 @@ function PlanTrip() {
 
     function handleFormSubmit(event) {
         waveHello();
-        event.preventDefault();
         API.saveTrip({
             start_destination: searchTerm.start_destination,
             end_destination: searchTerm.end_destination,
@@ -196,7 +195,7 @@ function PlanTrip() {
                                     <Form.Check type="checkbox" label="Save Trip" />
                                 </Form.Group>
                             </Container>
-                            <Button onClick={(event) => { handleFormSubmit(event); toasty(); setTimeout() }} variant="primary" type="submit">
+                            <Button onClick={(event) => { handleFormSubmit(event); toasty(); setTimeout(event) }} variant="primary" type="submit">
                                 Submit
                             </Button>
                             <ToastContainer autoClose={4000} />
