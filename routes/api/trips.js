@@ -63,6 +63,7 @@ router.route("/:id").get(function(req, res) {
 });
 //Trip route for saving a new trip
 router.route("/").post(function(req, res) {
+    console.log(req.body)
     db.Trip.create({
         start_destination: req.body.start_destination,
         end_destination: req.body.end_destination,
