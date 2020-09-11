@@ -70,6 +70,7 @@ router.route("/").post(function(req, res) {
         start_sail_date: req.body.start_sail_date,
         end_sail_date: req.body.end_sail_date
     }).then(function(dbTrip) {
+        console.log("is this functioning properly?")
         res.json(dbTrip);
     }).catch(err => {
         res.status(401).json(err);
