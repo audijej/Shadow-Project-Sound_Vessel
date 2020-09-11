@@ -43,10 +43,10 @@ function PlanTrip() {
             console.log("saved")
         }, 4000);
         API.saveTrip({
-            start_destination: searchTerm.startLocation,
-            end_destination: searchTerm.endLocation,
-            start_sail_date: tripDates.startingDate,
-            end_sail_date: tripDates.endingDate
+            start_destination: searchTerm.start_destination,
+            end_destination: searchTerm.end_destination,
+            start_sail_date: tripDates.start_sail_date,
+            end_sail_date: tripDates.end_sail_date
         })
         setSearchTerm("")
     }

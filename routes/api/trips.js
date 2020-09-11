@@ -63,7 +63,12 @@ router.route("/:id").get(function(req, res) {
 });
 //Trip route for saving a new trip
 router.route("/").post(function(req, res) {
-    db.Trip.create(req.body).then(function(dbTrip) {
+    db.Trip.create({
+        start_destination: req.body.start_destination,
+        end_destination: req.body.end_destination,
+        start_sail_date: req.body.start_sail_date,
+        end_sail_date: req.body.end_sail_date
+    }).then(function(dbTrip) {
         res.json(dbTrip);
     });
 });
