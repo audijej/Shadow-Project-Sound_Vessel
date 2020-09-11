@@ -159,11 +159,11 @@ function PlanTrip() {
                         <Form >
                             <Form.Group controlId="formBasicEmail" >
                                 <Form.Label>Start</Form.Label>
-                                <Form.Control type="text" placeholder="Start location" value={searchTerm.startLocation} name="startLocation" onChange={handleInputChange} style={{ borderRadius: "10px" }} />
+                                <Form.Control type="text" placeholder="Start location" value={searchTerm.start_destination} name="start_destination" onChange={handleInputChange} style={{ borderRadius: "10px" }} />
                             </Form.Group>
                             <Form.Group controlId="formBasicPassword">
                                 <Form.Label>End</Form.Label>
-                                <Form.Control type="text" placeholder="End location" value={searchTerm.endLocation} name="endLocation" onChange={handleInputChange} style={{ borderRadius: "10px" }} />
+                                <Form.Control type="text" placeholder="End location" value={searchTerm.end_destination} name="end_destination" onChange={handleInputChange} style={{ borderRadius: "10px" }} />
                             </Form.Group>
                             <Container>
                                 <br></br>
@@ -172,10 +172,10 @@ function PlanTrip() {
                                         <i className="far fa-calendar-alt"></i>
                                         <DatePicker
                                             className="datePicker"
-                                            selected={tripDates.startingDate}
+                                            selected={tripDates.start_sail_date}
                                             onChange={handleStartChangeDate}
                                             timeCaption="time"
-                                            name="startingDate"
+                                            name="start_sail_date"
                                             dateFormat="MM/dd/yyyy"
                                         />
                                     </Col>
@@ -183,9 +183,9 @@ function PlanTrip() {
                                         <i className="far fa-calendar-alt"></i>
                                         <DatePicker
                                             className="datePicker"
-                                            selected={tripDates.endingDate}
+                                            selected={tripDates.end_sail_date}
                                             onChange={handleEndChangeDate}
-                                            name="endingDate"
+                                            name="end_sail_date"
                                             dateFormat="MM/dd/yyyy"
                                         />
                                     </Col>
