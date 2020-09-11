@@ -4,12 +4,12 @@ const router = require("express").Router();
 router.route("/").get(function(req, res) {
     let query = {};
     if (req.query.trip_id) {
-        query.TripId = req.query.trip_id;
+        query.TripId = req.query.sail_date_id;
     }
     db.Trip.findAll({
         where: query,
         // includes: [{model: db.Trip, include: [{ model: db.Ship}]}]
-        include:  [db.Ship]
+        include:  [db.Trip]
     }).then(function(dbTrip) {
         res.send(dbTrip);
     });
