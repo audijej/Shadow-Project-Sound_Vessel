@@ -43,6 +43,8 @@ function PlanTrip() {
             start_sail_date: tripDates.start_sail_date,
             end_sail_date: tripDates.end_sail_date
         })
+        console.log(searchTerm);
+        console.log(tripDates)
         setSearchTerm("");
         setTimeout(() => {
             console.log("saved")
@@ -60,7 +62,7 @@ function PlanTrip() {
         event.preventDefault();
         const { name, value } = event.target
         setSearchTerm({
-            ...searchTerm, start_destination: value, end_destination: value
+            ...searchTerm, [name]: value
         });
         console.log(value)
     }
