@@ -1,0 +1,126 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.btn {
+  color: aliceblue;
+  font-weight: bold;
+  border: aliceblue solid 1px;
+}
+
+td {
+  text-align: center;
+}
+
+th {
+  text-align: center;
+}
+
+.fa-calendar-alt {
+  font-size: 22px;
+}
+
+.datePicker {
+  border-radius: 10px;
+}
+
+#planTripPageStyle {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))
+}
+
+#planTripRow {
+  border: 2px black solid;
+}
+
+.navbar {
+  background-color: blue;
+
+}
+
+#homePageLink {
+  color: white;
+  font-size: 35px;
+  font-family: Kaushan Script;
+  text-shadow: 4px 4px 4px #000000;
+}
+
+#navbarLink {
+  color: white;
+  font-size: 20px;
+  font-family: Kaushan Script;
+}
+
+#singleResultTrip{ 
+  background-color: grey;
+  color: white;
+  font-size: 20px;
+  font-family: Kaushan Script;
+}
+
+.bg {
+  background-image:  url("https://image.freepik.com/free-vector/abstract-wave-background-soft-design_41084-386.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  height: auto;
+}
+
+footer {
+  color: black;
+  font-size: 20px;
+  text-align: center;
+  
+}
+
+.social-media-icon {
+  display: inline-block;
+  list-style: none;
+  padding: 5px;
+}
+
+i {
+  font-size: 30px;
+  text-align: center;
+}
+
+i:hover {
+  color: purple;
+  transition: .7s;
+  transform: rotate(360deg);
+}
