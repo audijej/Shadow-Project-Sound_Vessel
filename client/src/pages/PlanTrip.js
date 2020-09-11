@@ -25,15 +25,13 @@ function PlanTrip() {
     const [trip, setTrip] = useState([])
 
     const [searchTerm, setSearchTerm] = useState({
-        startLocation: "",
-        endLocation: "",
-        // startingDate: new Date(),
-        // endingDate: new Date()
+        start_destination: "",
+        end_destination: "",
     })
 
     const [tripDates, setTripDates] = useState({
-        startingDate: new Date(),
-        endingDate: new Date()
+        start_sail_date: new Date(),
+        end_sail_date: new Date()
     })
 
     function handleFormSubmit(index) {
