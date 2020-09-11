@@ -34,19 +34,20 @@ function PlanTrip() {
         end_sail_date: new Date()
     })
 
-    function handleFormSubmit(index) {
-        console.log(index);
+    function handleFormSubmit(event) {
         waveHello();
-        setTimeout(() => {
-            console.log("saved")
-        }, 4000);
+        event.preventDefault();
         API.saveTrip({
             start_destination: searchTerm.start_destination,
             end_destination: searchTerm.end_destination,
             start_sail_date: tripDates.start_sail_date,
             end_sail_date: tripDates.end_sail_date
         })
-        setSearchTerm("")
+        setSearchTerm("");
+        toasty();
+        setTimeout(() => {
+            console.log("saved")
+        }, 4000);
     }
 
     function toasty() {
