@@ -54,7 +54,7 @@ module.exports = function (sequelize, DataTypes) {
     Ship.belongsTo(models.Trip, {
       as: "leader",
       onDelete: 'NO ACTION',
-      onUpdate: 'NO ACTION',
+      onUpdate: 'CASCADE',
       allowNull: true
     }
     );
