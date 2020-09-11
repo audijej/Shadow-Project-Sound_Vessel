@@ -3,13 +3,13 @@ const router = require("express").Router();
 //route to get all trips
 router.route("/").get(function(req, res) {
     let query = {};
-    if (req.query.trip_id) {
+    if (req.query.sail_date_id) {
         query.TripId = req.query.sail_date_id;
     }
     db.Trip.findAll({
         where: query,
         // includes: [{model: db.Trip, include: [{ model: db.Ship}]}]
-        include:  [db.Trip]
+        includes:  [db.Trip]
     }).then(function(dbTrip) {
         res.send(dbTrip);
     });
