@@ -23,7 +23,7 @@ router.route("/:id").get(function(req, res) {
             sail_date_id: req.params.id
         },
         // includes: [{model: db.Trip, include: [{ model: db.Ship}]}]
-        include: [db.Ship]
+        include: 'leader'
     }).then(function(dbTrip) {
         console.log("find the problem")
         res.json(dbTrip);

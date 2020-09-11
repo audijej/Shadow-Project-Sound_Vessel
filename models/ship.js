@@ -52,7 +52,7 @@ module.exports = function (sequelize, DataTypes) {
 
   Ship.associate = function (models) {
     Ship.belongsTo(models.Trip, {
-      as: "tripShipCombination",
+      as: "leader",
       onDelete: 'NO ACTION',
       onUpdate: 'NO ACTION',
       allowNull: true
