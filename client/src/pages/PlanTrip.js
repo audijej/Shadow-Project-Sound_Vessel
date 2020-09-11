@@ -59,9 +59,9 @@ function PlanTrip() {
 
     const handleInputChange = (event, date) => {
         event.preventDefault();
-        const value = event.target.value
+        const { name, value } = event.target
         setSearchTerm({
-            ...searchTerm, [event.target.name]: value
+            ...searchTerm, [name]: value
         });
         console.log(value)
     }
@@ -69,7 +69,7 @@ function PlanTrip() {
     const handleStartChangeDate = (date) => {
         setTripDates({
             ...tripDates,
-            startingDate: date,
+            start_sail_date: date,
         })
         console.log(date)
     }
@@ -77,7 +77,7 @@ function PlanTrip() {
     const handleEndChangeDate = (date) => {
         setTripDates({
             ...tripDates,
-            endingDate: date
+            end_sail_date: date
         })
         console.log(date)
     }
