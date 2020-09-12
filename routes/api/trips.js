@@ -22,7 +22,7 @@ router.route("/:id").get(function(req, res) {
         where: {
             sail_date_id: req.params.id
         },
-        includes: [{model: db.Trip, include: [{ model: db.Ship}]}]
+        includes: [db.Trip]
         // include: 'leader'
     }).then(function(dbTrip) {
         console.log("find the problem")
@@ -88,15 +88,15 @@ router.route("/:id").delete(function(req, res) {
     });
 });
 //put route for updating posts
-router.route("/trips/:id").get(function(req, res) {
-    db.Trip.update(
-        req.body, 
-        {
-            where: {
-                id: req.body.id
-            }
-        }).then(function(dbTrip) {
-            res.json(dbTrip);
-        });
-});
+// router.route("/trips/:id").get(function(req, res) {
+//     db.Trip.update(
+//         req.body, 
+//         {
+//             where: {
+//                 id: req.body.id
+//             }
+//         }).then(function(dbTrip) {
+//             res.json(dbTrip);
+//         });
+// });
 module.exports = router;
