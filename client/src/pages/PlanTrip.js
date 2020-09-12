@@ -36,7 +36,6 @@ function PlanTrip() {
 
     function handleFormSubmit(event) {
         waveHello();
-        event.preventDefault()
         API.saveTrip({
             start_destination: searchTerm.start_destination,
             end_destination: searchTerm.end_destination,
