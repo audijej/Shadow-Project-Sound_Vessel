@@ -1,6 +1,6 @@
 USE sound_vessel_traffic_db;
 
-INSERT INTO ships (main_id, ship_id, imo, mmsi, ship_name, callsign, flag, ship_type_name, destination, eta, ship_length, ship_width, ship_image)
+INSERT INTO Ships (main_id, ship_id, imo, mmsi, ship_name, callsign, flag, ship_type_name, destination, eta, ship_length, ship_width, ship_image)
 VALUE (1, 4448177, 0, 338225775, "KINGFISHER", "WDE9999", "US", "Fishing Vessel", "PORT ANGELES", "2020-09-012T00:00:00", 200.5, 30.5, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=4448177&size=thumb600"),
 (2, 1673037, 9736406, 477521600, "SEAL ISLAND", "VRTB6", "HK", "Cargo Bulk Carrier", "SEATTLE", "2020-09-012T00:00:00", 176.5, 28.8, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=167303&size=thumb600"),
 (3, 686825, 9198109, 477274700, "OOCL NEW YORK", "VRJS2", "HK", "Cargo Container Ship", "SEATTLE", "2020-09-012T00:00:00", 277.23, 40, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=686825&size=thumb600"),
@@ -38,7 +38,7 @@ VALUE (1, 4448177, 0, 338225775, "KINGFISHER", "WDE9999", "US", "Fishing Vessel"
 (35, 445502, 8856613, 367445470, "CAPE GREIG", "WDF3906", "US", "Fishing Vessel", "BELLINGHAM", "2020-09-025T20:43:00", 53.25, 9.14, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=445502&size=thumb600"),
 (36, 433726, 8992962, 367005070, "CHIEF SEATTLE", "VTTM4", "HK", "Fire Fighting Vessel", "VASHON", "2020-09-025T17:32:00", 29, 8, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=433726&size=thumb600"),
 (37, 455459, 8346962, 369021000, "SWIFT ARROW", "WAFK", "US", "Port Tender", "VASHON", "2020-09-026T18:39:00", 14, 4, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=455459&size=thumb600"),
-(38, 445543, 6710920, 369960000, "FAIRWEATHER", "WDF3973", "US", "Research/Survey Vessel", "BALLARD LOCKS", "2020-09-027T00:00:00", 60.35, 13, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=457247&size=thumb600");
+(38, 445543, 6710920, 369960000, "FAIRWEATHER", "WDF3973", "US", "Research/Survey Vessel", "BALLARD LOCKS", "2020-09-027T00:00:00", 60.35, 13, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=457247&size=thumb600"),
 (39, 4448177, 0, 338225775, "KINGFISHER", "WDE9999", "US", "Fishing Vessel", "PORT ANGELES", "2020-09-028T00:00:00", 200.5, 30.5, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=4448177&size=thumb600"),
 (40, 1673037, 9736406, 477521600, "SEAL ISLAND", "VRTB6", "HK", "Cargo Bulk Carrier", "SEATTLE", "2020-09-028T00:00:00", 176.5, 28.8, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=167303&size=thumb600"),
 (41, 686825, 9198109, 477274700, "OOCL NEW YORK", "VRJS2", "HK", "Cargo Container Ship", "SEATTLE", "2020-09-028T00:00:00", 277.23, 40, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=686825&size=thumb600"),
@@ -74,7 +74,7 @@ VALUE (1, 4448177, 0, 338225775, "KINGFISHER", "WDE9999", "US", "Fishing Vessel"
 (71, 445502, 8856613, 367445470, "CAPE GREIG", "WDF3906", "US", "Fishing Vessel", "BELLINGHAM", "2020-10-012T20:43:00", 53.25, 9.14, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=445502&size=thumb600"),
 (72, 433726, 8992962, 367005070, "CHIEF SEATTLE", "VTTM4", "HK", "Fire Fighting Vessel", "VASHON", "2020-10-012T17:32:00", 29, 8, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=433726&size=thumb600"),
 (73, 455459, 8346962, 369021000, "SWIFT ARROW", "WAFK", "US", "Port Tender", "VASHON", "2020-10-013T18:39:00", 14, 4, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=455459&size=thumb600"),
-(74, 445543, 6710920, 369960000, "FAIRWEATHER", "WDF3973", "US", "Research/Survey Vessel", "BALLARD LOCKS", "2020-10-013T00:00:00", 60.35, 13, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=457247&size=thumb600");
+(74, 445543, 6710920, 369960000, "FAIRWEATHER", "WDF3973", "US", "Research/Survey Vessel", "BALLARD LOCKS", "2020-10-013T00:00:00", 60.35, 13, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=457247&size=thumb600"),
 (75, 4448177, 0, 338225775, "KINGFISHER", "WDE9999", "US", "Fishing Vessel", "PORT ANGELES", "2020-10-013T00:00:00", 200.5, 30.5, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=4448177&size=thumb600"),
 (76, 1673037, 9736406, 477521600, "SEAL ISLAND", "VRTB6", "HK", "Cargo Bulk Carrier", "SEATTLE", "2020-10-014T00:00:00", 176.5, 28.8, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=167303&size=thumb600"),
 (77, 686825, 9198109, 477274700, "OOCL NEW YORK", "VRJS2", "HK", "Cargo Container Ship", "SEATTLE", "2020-10-014T00:00:00", 277.23, 40, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=686825&size=thumb600"),
@@ -110,7 +110,7 @@ VALUE (1, 4448177, 0, 338225775, "KINGFISHER", "WDE9999", "US", "Fishing Vessel"
 (107, 445502, 8856613, 367445470, "CAPE GREIG", "WDF3906", "US", "Fishing Vessel", "BELLINGHAM", "2020-10-026T20:43:00", 53.25, 9.14, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=445502&size=thumb600"),
 (108, 433726, 8992962, 367005070, "CHIEF SEATTLE", "VTTM4", "HK", "Fire Fighting Vessel", "VASHON", "2020-10-026T17:32:00", 29, 8, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=433726&size=thumb600"),
 (109, 455459, 8346962, 369021000, "SWIFT ARROW", "WAFK", "US", "Port Tender", "VASHON", "2020-10-027T18:39:00", 14, 4, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=455459&size=thumb600"),
-(110, 445543, 6710920, 369960000, "FAIRWEATHER", "WDF3973", "US", "Research/Survey Vessel", "BALLARD LOCKS", "2020-10-027T00:00:00", 60.35, 13, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=457247&size=thumb600");
+(110, 445543, 6710920, 369960000, "FAIRWEATHER", "WDF3973", "US", "Research/Survey Vessel", "BALLARD LOCKS", "2020-10-027T00:00:00", 60.35, 13, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=457247&size=thumb600"),
 (111, 4448177, 0, 338225775, "KINGFISHER", "WDE9999", "US", "Fishing Vessel", "PORT ANGELES", "2020-10-027T00:00:00", 200.5, 30.5, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=4448177&size=thumb600"),
 (112, 1673037, 9736406, 477521600, "SEAL ISLAND", "VRTB6", "HK", "Cargo Bulk Carrier", "SEATTLE", "2020-10-028T00:00:00", 176.5, 28.8, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=167303&size=thumb600"),
 (113, 686825, 9198109, 477274700, "OOCL NEW YORK", "VRJS2", "HK", "Cargo Container Ship", "SEATTLE", "2020-10-028T00:00:00", 277.23, 40, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=686825&size=thumb600"),
@@ -168,7 +168,7 @@ VALUE (1, 4448177, 0, 338225775, "KINGFISHER", "WDE9999", "US", "Fishing Vessel"
 (165, 445502, 8856613, 367445470, "CAPE GREIG", "WDF3906", "US", "Fishing Vessel", "BELLINGHAM", "2020-11-025T20:43:00", 53.25, 9.14, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=445502&size=thumb600"),
 (166, 433726, 8992962, 367005070, "CHIEF SEATTLE", "VTTM4", "HK", "Fire Fighting Vessel", "VASHON", "2020-11-025T17:32:00", 29, 8, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=433726&size=thumb600"),
 (167, 455459, 8346962, 369021000, "SWIFT ARROW", "WAFK", "US", "Port Tender", "VASHON", "2020-11-026T18:39:00", 14, 4, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=455459&size=thumb600"),
-(168, 445543, 6710920, 369960000, "FAIRWEATHER", "WDF3973", "US", "Research/Survey Vessel", "BALLARD LOCKS", "2020-11-027T00:00:00", 60.35, 13, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=457247&size=thumb600");
+(168, 445543, 6710920, 369960000, "FAIRWEATHER", "WDF3973", "US", "Research/Survey Vessel", "BALLARD LOCKS", "2020-11-027T00:00:00", 60.35, 13, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=457247&size=thumb600"),
 (169, 4448177, 0, 338225775, "KINGFISHER", "WDE9999", "US", "Fishing Vessel", "PORT ANGELES", "2020-11-028T00:00:00", 200.5, 30.5, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=4448177&size=thumb600"),
 (170, 1673037, 9736406, 477521600, "SEAL ISLAND", "VRTB6", "HK", "Cargo Bulk Carrier", "SEATTLE", "2020-11-028T00:00:00", 176.5, 28.8, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=167303&size=thumb600"),
 (171, 686825, 9198109, 477274700, "OOCL NEW YORK", "VRJS2", "HK", "Cargo Container Ship", "SEATTLE", "2020-11-028T00:00:00", 277.23, 40, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=686825&size=thumb600"),
@@ -204,7 +204,7 @@ VALUE (1, 4448177, 0, 338225775, "KINGFISHER", "WDE9999", "US", "Fishing Vessel"
 (201, 445502, 8856613, 367445470, "CAPE GREIG", "WDF3906", "US", "Fishing Vessel", "BELLINGHAM", "2020-11-012T20:43:00", 53.25, 9.14, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=445502&size=thumb600"),
 (202, 433726, 8992962, 367005070, "CHIEF SEATTLE", "VTTM4", "HK", "Fire Fighting Vessel", "VASHON", "2020-11-012T17:32:00", 29, 8, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=433726&size=thumb600"),
 (203, 455459, 8346962, 369021000, "SWIFT ARROW", "WAFK", "US", "Port Tender", "VASHON", "2020-11-013T18:39:00", 14, 4, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=455459&size=thumb600"),
-(204, 445543, 6710920, 369960000, "FAIRWEATHER", "WDF3973", "US", "Research/Survey Vessel", "BALLARD LOCKS", "2020-11-013T00:00:00", 60.35, 13, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=457247&size=thumb600");
+(204, 445543, 6710920, 369960000, "FAIRWEATHER", "WDF3973", "US", "Research/Survey Vessel", "BALLARD LOCKS", "2020-11-013T00:00:00", 60.35, 13, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=457247&size=thumb600"),
 (205, 4448177, 0, 338225775, "KINGFISHER", "WDE9999", "US", "Fishing Vessel", "PORT ANGELES", "2020-11-013T00:00:00", 200.5, 30.5, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=4448177&size=thumb600"),
 (206, 1673037, 9736406, 477521600, "SEAL ISLAND", "VRTB6", "HK", "Cargo Bulk Carrier", "SEATTLE", "2020-11-014T00:00:00", 176.5, 28.8, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=167303&size=thumb600"),
 (207, 686825, 9198109, 477274700, "OOCL NEW YORK", "VRJS2", "HK", "Cargo Container Ship", "SEATTLE", "2020-11-014T00:00:00", 277.23, 40, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=686825&size=thumb600"),
@@ -240,7 +240,7 @@ VALUE (1, 4448177, 0, 338225775, "KINGFISHER", "WDE9999", "US", "Fishing Vessel"
 (237, 445502, 8856613, 367445470, "CAPE GREIG", "WDF3906", "US", "Fishing Vessel", "BELLINGHAM", "2020-11-026T20:43:00", 53.25, 9.14, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=445502&size=thumb600"),
 (238, 433726, 8992962, 367005070, "CHIEF SEATTLE", "VTTM4", "HK", "Fire Fighting Vessel", "VASHON", "2020-11-026T17:32:00", 29, 8, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=433726&size=thumb600"),
 (239, 455459, 8346962, 369021000, "SWIFT ARROW", "WAFK", "US", "Port Tender", "VASHON", "2020-11-027T18:39:00", 14, 4, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=455459&size=thumb600"),
-(240, 445543, 6710920, 369960000, "FAIRWEATHER", "WDF3973", "US", "Research/Survey Vessel", "BALLARD LOCKS", "2020-11-027T00:00:00", 60.35, 13, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=457247&size=thumb600");
+(240, 445543, 6710920, 369960000, "FAIRWEATHER", "WDF3973", "US", "Research/Survey Vessel", "BALLARD LOCKS", "2020-11-027T00:00:00", 60.35, 13, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=457247&size=thumb600"),
 (241, 4448177, 0, 338225775, "KINGFISHER", "WDE9999", "US", "Fishing Vessel", "PORT ANGELES", "2020-11-027T00:00:00", 200.5, 30.5, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=4448177&size=thumb600"),
 (242, 1673037, 9736406, 477521600, "SEAL ISLAND", "VRTB6", "HK", "Cargo Bulk Carrier", "SEATTLE", "2020-11-028T00:00:00", 176.5, 28.8, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=167303&size=thumb600"),
 (243, 686825, 9198109, 477274700, "OOCL NEW YORK", "VRJS2", "HK", "Cargo Container Ship", "SEATTLE", "2020-11-028T00:00:00", 277.23, 40, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=686825&size=thumb600"),
@@ -298,7 +298,7 @@ VALUE (1, 4448177, 0, 338225775, "KINGFISHER", "WDE9999", "US", "Fishing Vessel"
 (295, 445502, 8856613, 367445470, "CAPE GREIG", "WDF3906", "US", "Fishing Vessel", "BELLINGHAM", "2020-12-025T20:43:00", 53.25, 9.14, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=445502&size=thumb600"),
 (296, 433726, 8992962, 367005070, "CHIEF SEATTLE", "VTTM4", "HK", "Fire Fighting Vessel", "VASHON", "2020-12-025T17:32:00", 29, 8, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=433726&size=thumb600"),
 (297, 455459, 8346962, 369021000, "SWIFT ARROW", "WAFK", "US", "Port Tender", "VASHON", "2020-12-026T18:39:00", 14, 4, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=455459&size=thumb600"),
-(298, 445543, 6710920, 369960000, "FAIRWEATHER", "WDF3973", "US", "Research/Survey Vessel", "BALLARD LOCKS", "2020-12-027T00:00:00", 60.35, 13, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=457247&size=thumb600");
+(298, 445543, 6710920, 369960000, "FAIRWEATHER", "WDF3973", "US", "Research/Survey Vessel", "BALLARD LOCKS", "2020-12-027T00:00:00", 60.35, 13, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=457247&size=thumb600"),
 (300, 4448177, 0, 338225775, "KINGFISHER", "WDE9999", "US", "Fishing Vessel", "PORT ANGELES", "2020-12-028T00:00:00", 200.5, 30.5, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=4448177&size=thumb600"),
 (301, 1673037, 9736406, 477521600, "SEAL ISLAND", "VRTB6", "HK", "Cargo Bulk Carrier", "SEATTLE", "2020-12-028T00:00:00", 176.5, 28.8, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=167303&size=thumb600"),
 (302, 686825, 9198109, 477274700, "OOCL NEW YORK", "VRJS2", "HK", "Cargo Container Ship", "SEATTLE", "2020-12-028T00:00:00", 277.23, 40, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=686825&size=thumb600"),
@@ -332,7 +332,7 @@ VALUE (1, 4448177, 0, 338225775, "KINGFISHER", "WDE9999", "US", "Fishing Vessel"
 (330, 431497, 8971877, 366982320, "MARSHALL FOSS", "WDB9762", "US", "Tug", "SEATTLE", "2020-12-011T13:26:00", 29.87, 12, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=431497&size=thumb600"),
 (331, 4840336, 9801770, 367712660, "CHIMACUM", "WDI5854", "US", "Ro-Ro/Passenger Ship", "SEATTLE", "2020-12-011T14:00:00", 110, 28.8, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=4840336&size=thumb600"),
 (332, 445502, 8856613, 367445470, "CAPE GREIG", "WDF3906", "US", "Fishing Vessel", "BELLINGHAM", "2020-12-012T20:43:00", 53.25, 9.14, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=445502&size=thumb600"),
-(333, 433726, 8992962, 367005070, "CHIEF SEATTLE", "VTTM4", "HK", "Fire Fighting Vessel", "VASHON", "2020-12-012T17:32:00", 29, 8, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=433726&size=thumb600"),
+(333, 433726, 8992962, 367005070, "CHIEF SEATTLE", "VTTM4", "HK", "Fire Fighting Vessel", "VASHON", "2020-12-012T17:32:00", 29, 8, "https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=433726&size=thumb600")
 
 
 INSERT INTO trips (sail_date_id, start_destination, end_destination, start_sail_date, end_sail_date)
