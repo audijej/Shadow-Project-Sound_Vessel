@@ -1,15 +1,5 @@
 {
-    "development": {
-      "username": "JAWSDB_DB_USERNAME",
-      "password": "JAWSDB_DB_PASSWORD",
-      "database": "JAWSDB_DB_DATABASE",
-      "host": "JAWSDB_DB_HOST",
-      "port": 3306,
-      "dialect": "mysql",
-      "define": {
-        "timestamps": false
-      }
-    },
+ 
     "test": {
       "username": "root",
       "password": null,

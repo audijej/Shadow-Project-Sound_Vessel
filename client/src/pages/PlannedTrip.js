@@ -19,56 +19,11 @@ function PlannedTrip() {
     const { id } = useParams()
     const [show, setShow] = useState(false);
     const handleClose = () => setModalId("");
-    const handleShow = () => setShow(true);
-    const [modalId, setModalId] = useState("");
+    const handleShow = () => setShow({});
+    const [modalId, setModalId] = useState([]);
+    const [modalIdContents, setModalIdContents] = useState("");
     const [searchTerm, setSearchTerm] = React.useState("");
 
-
-    // function loadTrips() {
-    // //     return 
-    // //         .catch(err => console.log(err));
-    // // };
-
-    // function loadTraffic() {
-    //     return 
-    //         .catch (err => console.log(err));
-    // };
-
-    // useEffect(() => {
-    //     loadTrips()
-    // }, [])
-
-    // useEffect(() => {
-    //     loadTraffic()
-    // },[])
-
-    //     function checkETA() {
-    //         let matchingDates =[]
-
-    // let matchedDates = trafficMatch.filter(function(event){
-    //     if(trafficMatch.eta == trip.start_sail_date) {
-    //         return true
-    //     } 
-    //     // setTrafficMatch(matchedDates)
-    //     matchingDates.push(matchedDates)
-
-    // })
-    // console.log(trafficMatch)
-    //     }
-
-    // function checkSailingDate(event) {
-    //     const matchedDates = traffic.filter(traffics => {
-    //     // if this task has the same ID as the edited task
-    //       if (event.eta === trip.start_sail_date) {
-    //         //
-    //         return {...trafficMatch}
-    //       }
-    //       return traffics;
-    //     });
-    //     setTrafficMatch(matchedDates);
-    //     console.log(matchedDates)
-
-    //   }
 
     useEffect(() => {
         API.getPlannedTrips(id)
@@ -188,19 +143,19 @@ function PlannedTrip() {
                             let eta=  elem.eta && elem.eta.split("T")[0];
                             return start_sail_date === eta
                         }).map((traffics) => {
-
-                            return (<ListItem key={traffics.id} value={traffics}>
+                            console.log(traffics)
+                            return (<ListItem key={traffics.main_id} value={traffics}>
                                 <strong>
                                     <Button variant="primary" onClick={() => setModalId(`modal${traffics}`)}>
                                         Ship Name: {traffics.ship_name}
                                     </Button>
 
                                     <ul>
-                                        <Modal size="lg" show={modalId === `modal${traffics}`} onHide={handleClose}>
+                                        <Modal key={traffics.main_id} value={traffics} size="lg" show={modalId === `modal${traffics}`} onHide={handleClose}>
                                             <Modal.Header closeButton>
                                                 <Modal.Title>Ship Name: {traffics.ship_name}</Modal.Title>
                                             </Modal.Header>
-                                            <Modal.Body>
+                                            <Modal.Body key={traffics.main_id} value={traffics}>
                                                 Ship Name: {traffics.ship_name}
                                                 <br></br>
                                             Ship ID: {traffics.ship_id}
@@ -221,20 +176,9 @@ function PlannedTrip() {
                                             </Button>
                                             </Modal.Footer>
                                         </Modal>
-                                        {/* Ship Name: {traffics.ship_name}
-                                        <br></br>
-                                            Ship ID: {traffics.ship_id}
-                                        <br></br>
-                                         Ship Type: {traffics.ship_type_name}
-                                        <br></br>
-                                         Flag: {traffics.flag}
-                                        <br></br>
-                                         Destination: {traffics.destination}
-                                        <br></br>
-                                         Eta: {traffics.eta && traffics.eta.split("T")[0]} */}
+                                       
                                     </ul>
                                 </strong>
-                                <br></br>
                             </ListItem>
                             )
                         })}

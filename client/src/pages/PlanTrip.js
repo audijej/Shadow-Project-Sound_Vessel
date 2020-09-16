@@ -203,38 +203,7 @@ function PlanTrip() {
                     </Container>
                 </Col>
             </Row>
-
-            {/* <Container fluid id="resultsdiv" style={{ color: "white", textAlign: "center" }} >
-                <h1 >Ships encountered</h1>
-                {traffic.length ? (
-                    <List>
-                        {traffic.map(traffics => (
-                            <ListItem key={traffics.id}>
-                                <Link to={"/plannedtrip/" + traffics.id}>
-                                    <strong>
-                                        <ul>
-                                            Ship Name: {traffics.ship_name}
-                                            <br></br>
-                                         Ship Type: {traffics.ship_type_name}
-                                            <br></br>
-                                         Flag: {traffics.flag}
-                                            <br></br>
-                                         Destination: {traffics.destination}
-                                            <br></br>
-                                         Eta: {traffics.eta}
-                                        </ul>
-                                    </strong>
-                                </Link>
-                                <br></br>
-                            </ListItem>
-                        ))}
-                    </List>
-                ) : (
-                        <h3>No Results to Display</h3>
-                    )}
-            </Container> */}
-
-
+            
             <Container fluid id="resultsdiv" style={{ color: "white", textAlign: "center" }} >
                 <h1 style={{ textAlign: "center", color: "black", fontFamily: 'Kaushan Script', textShadow: "4px 4px 4px #000000" }}>Planned Trips</h1>
                 {trip.length ? (
