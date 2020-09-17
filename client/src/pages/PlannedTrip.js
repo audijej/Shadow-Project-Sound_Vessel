@@ -18,19 +18,22 @@ function PlannedTrip() {
     const [trafficMatch, setTrafficMatch] = useState([]);
     const { id } = useParams()
     const [show, setShow] = useState(false);
-    const handleClose = () => setModalId("");
-    const handleShow = () => setShow({});
-    const [modalId, setModalId] = useState([]);
-    const [modalIdContents, setModalIdContents] = useState("");
+    const [modalIdContents, setModalIdContents] = useState([]);
     const [searchTerm, setSearchTerm] = React.useState("");
 
+    const handleShow = (traffics) => {
+        setShow(true);
+        setModalIdContents({ activeItems: traffics })
+    };
+
+    const handleClose = () => setShow(false);
 
     useEffect(() => {
         API.getPlannedTrips(id)
-            .then(({data: tripData}) => {
+            .then(({ data: tripData }) => {
                 setTrip(tripData)
                 API.getTraffic()
-                    .then(({data: trafficData}) => {
+                    .then(({ data: trafficData }) => {
                         setTrafficMatch(trafficData)
                         let matchingDates = []
                         let shipMatchingDates = []
@@ -140,52 +143,60 @@ function PlannedTrip() {
 
                         {trafficMatch.filter((elem) => {
                             let start_sail_date = trip.start_sail_date && trip.start_sail_date.split("T")[0];
-                            let eta=  elem.eta && elem.eta.split("T")[0];
+                            let eta = elem.eta && elem.eta.split("T")[0];
                             return start_sail_date === eta
                         }).map((traffics) => {
                             console.log(traffics)
                             return (<ListItem key={traffics.main_id} value={traffics}>
                                 <strong>
-                                    <Button variant="primary" onClick={() => setModalId(`modal${traffics}`)}>
+                                    <Button variant="primary" onClick={() => handleShow(traffics)}>
                                         Ship Name: {traffics.ship_name}
                                     </Button>
 
                                     <ul>
-                                        <Modal key={traffics.main_id} value={traffics} size="lg" show={modalId === `modal${traffics}`} onHide={handleClose}>
-                                            <Modal.Header closeButton>
-                                                <Modal.Title>Ship Name: {traffics.ship_name}</Modal.Title>
-                                            </Modal.Header>
-                                            <Modal.Body key={traffics.main_id} value={traffics}>
-                                                Ship Name: {traffics.ship_name}
-                                                <br></br>
+                                    <Modal size="lg" show={show} onHide={handleClose}>
+                            <Modal.Header closeButton>
+                                <Modal.Title>Ship Name: {traffics.ship_name}</Modal.Title>
+                            </Modal.Header>
+                            <Modal.Body key={traffics.main_id} value={traffics}>
+                                Ship Name: {traffics.ship_name}
+                                <br></br>
                                             Ship ID: {traffics.ship_id}
-                                                <br></br>
+                                <br></br>
                                             Ship Type: {traffics.ship_type_name}
-                                                <br></br>
+                                <br></br>
                                             Flag: {traffics.flag}
-                                                <br></br>
+                                <br></br>
                                             Destination: {traffics.destination}
-                                                <br></br>
+                                <br></br>
                                             Eta: {traffics.eta && traffics.eta.split("T")[0]}
-                                                <br></br>
-                                                <img style={{ width: "750px", height: "750px" }} src={traffics.ship_image} alt="shipImage" />
-                                            </Modal.Body>
-                                            <Modal.Footer>
-                                                <Button variant="secondary" onClick={handleClose}>
-                                                    Close
+                                <br></br>
+                                <img style={{ width: "750px", height: "750px" }} src={traffics.ship_image} alt="shipImage" />
+                            </Modal.Body>
+                            <Modal.Footer>
+                                <Button variant="secondary" onClick={handleClose}>
+                                    Close
                                             </Button>
-                                            </Modal.Footer>
-                                        </Modal>
-                                       
+                            </Modal.Footer>
+                        </Modal>
+
                                     </ul>
                                 </strong>
                             </ListItem>
                             )
-                        })}
+                        })
+                        
+
+                        
+                        }
+
+                        
                     </List>
                 ) : (
                         <h3>No Results to Display</h3>
                     )}
+
+
 
             </Container>
 
