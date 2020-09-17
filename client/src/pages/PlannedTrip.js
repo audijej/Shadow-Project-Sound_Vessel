@@ -23,7 +23,7 @@ function PlannedTrip() {
 
     const handleShow = (traffics) => {
         setShow(true);
-        setModalIdContents({ activeItems: traffics })
+        setModalIdContents(traffics)
     };
 
     const handleClose = () => setShow(false);
@@ -153,34 +153,8 @@ function PlannedTrip() {
                                         Ship Name: {traffics.ship_name}
                                     </Button>
 
-                                    <ul>
-                                    <Modal size="lg" show={show} onHide={handleClose}>
-                            <Modal.Header closeButton>
-                                <Modal.Title>Ship Name: {traffics.ship_name}</Modal.Title>
-                            </Modal.Header>
-                            <Modal.Body key={traffics.main_id} value={traffics}>
-                                Ship Name: {traffics.ship_name}
-                                <br></br>
-                                            Ship ID: {traffics.ship_id}
-                                <br></br>
-                                            Ship Type: {traffics.ship_type_name}
-                                <br></br>
-                                            Flag: {traffics.flag}
-                                <br></br>
-                                            Destination: {traffics.destination}
-                                <br></br>
-                                            Eta: {traffics.eta && traffics.eta.split("T")[0]}
-                                <br></br>
-                                <img style={{ width: "750px", height: "750px" }} src={traffics.ship_image} alt="shipImage" />
-                            </Modal.Body>
-                            <Modal.Footer>
-                                <Button variant="secondary" onClick={handleClose}>
-                                    Close
-                                            </Button>
-                            </Modal.Footer>
-                        </Modal>
 
-                                    </ul>
+
                                 </strong>
                             </ListItem>
                             )
@@ -190,7 +164,31 @@ function PlannedTrip() {
                         
                         }
 
-                        
+<Modal size="lg" show={show} onHide={handleClose}>
+                            <Modal.Header closeButton>
+                                <Modal.Title>Ship Name: {modalIdContents.ship_name}</Modal.Title>
+                            </Modal.Header>
+                            <Modal.Body key={modalIdContents.main_id} value={modalIdContents}>
+                                Ship Name: {modalIdContents.ship_name}
+                                <br></br>
+                                            Ship ID: {modalIdContents.ship_id}
+                                <br></br>
+                                            Ship Type: {modalIdContents.ship_type_name}
+                                <br></br>
+                                            Flag: {modalIdContents.flag}
+                                <br></br>
+                                            Destination: {modalIdContents.destination}
+                                <br></br>
+                                            Eta: {modalIdContents.eta && modalIdContents.eta.split("T")[0]}
+                                <br></br>
+                                <img style={{ width: "750px", height: "750px" }} src={modalIdContents.ship_image} alt="shipImage" />
+                            </Modal.Body>
+                            <Modal.Footer>
+                                <Button variant="secondary" onClick={handleClose}>
+                                    Close
+                                            </Button>
+                            </Modal.Footer>
+                        </Modal>
                     </List>
                 ) : (
                         <h3>No Results to Display</h3>
