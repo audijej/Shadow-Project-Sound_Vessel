@@ -159,12 +159,10 @@ function PlannedTrip() {
                             </ListItem>
                             )
                         })
-                        
 
-                        
                         }
 
-<Modal size="lg" show={show} onHide={handleClose}>
+                        <Modal size="lg" show={show} onHide={handleClose}>
                             <Modal.Header closeButton>
                                 <Modal.Title>Ship Name: {modalIdContents.ship_name}</Modal.Title>
                             </Modal.Header>
