@@ -1,9 +1,9 @@
 {
     "development": {
-      "username": null,
-      "password": null,
-      "database": null,
-      "host": null,
+      "username": "rim4z29gtm3oyu0x",
+      "password": "wwjeozdsl0r13se4",
+      "database": "jo6ibnb55fa07ocy",
+      "host": "w1h4cr5sb73o944p.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
       "port": 3306,
       "dialect": "mysql",
       "define": {

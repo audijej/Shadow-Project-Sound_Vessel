@@ -8,7 +8,8 @@ import API from "../utils/API";
 import { List, ListItem } from "../components/List/List"
 import { Link, useParams } from "react-router-dom";
 import SeattleLakeUnionBoat from '../components/Images/Seattle-Lake-Union.JPG';
-import Modal from 'react-bootstrap/Modal'
+import Modal from 'react-bootstrap/Modal';
+import '../App.css';
 
 function PlannedTrip() {
 
@@ -122,16 +123,36 @@ function PlannedTrip() {
 
             <Container id="singleResultTrip">
 
-                <h1 style={{ textAlign: "center", fontSize: "50px" }}>Saved Trips</h1>
+                <h1 style={{ textAlign: "center", fontSize: "50px" }}>Your Saved Trips</h1>
                 <br></br>
                 <h2>Start Destination: {trip.start_destination}</h2>
                 <h2>End Destination: {trip.end_destination}</h2>
                 <h2>Start Sail Date: {trip.start_sail_date && trip.start_sail_date.split("T")[0]}</h2>
                 <h2> End Sail Date: {trip.end_sail_date && trip.end_sail_date.split("T")[0]}</h2>
                 <br></br>
-                <h1 style={{ textAlign: "center", fontSize: "50px" }}><Link to="/plantrip">← Back to Plan a Trip</Link>
+                <h1 style={{ color: "white", fontSize: "50px" }}><Link to="/plantrip">← Back to Plan a Trip</Link>
                 </h1>
 
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Start Destination</th>
+                            <th>End Destination</th>
+                            <th>Start Sail Date</th>
+                            <th>End Sail Date</th>
+                        </tr>
+                    </thead>
+                        
+                    <tbody id="tripListing">
+                    <tr>
+                          <td>{trip.start_destination}</td>
+                          <td>{trip.end_destination}</td>
+                          <td>{trip.start_sail_date && trip.start_sail_date.split("T")[0]}</td>
+                          <td>{trip.end_sail_date && trip.end_sail_date.split("T")[0]}</td>  
+                        </tr>
+                    </tbody>
+
+                </table>
 
             </Container>
 
@@ -152,9 +173,6 @@ function PlannedTrip() {
                                     <Button variant="primary" onClick={() => handleShow(traffics)}>
                                         Ship Name: {traffics.ship_name}
                                     </Button>
-
-
-
                                 </strong>
                             </ListItem>
                             )
@@ -169,31 +187,28 @@ function PlannedTrip() {
                             <Modal.Body key={modalIdContents.main_id} value={modalIdContents}>
                                 Ship Name: {modalIdContents.ship_name}
                                 <br></br>
-                                            Ship ID: {modalIdContents.ship_id}
+                                Ship ID: {modalIdContents.ship_id}
                                 <br></br>
-                                            Ship Type: {modalIdContents.ship_type_name}
+                                Ship Type: {modalIdContents.ship_type_name}
                                 <br></br>
-                                            Flag: {modalIdContents.flag}
+                                Flag: {modalIdContents.flag}
                                 <br></br>
-                                            Destination: {modalIdContents.destination}
+                                Destination: {modalIdContents.destination}
                                 <br></br>
-                                            Eta: {modalIdContents.eta && modalIdContents.eta.split("T")[0]}
+                                Eta: {modalIdContents.eta && modalIdContents.eta.split("T")[0]}
                                 <br></br>
-                                <img style={{ width: "750px", height: "750px" }} src={modalIdContents.ship_image} alt="shipImage" />
+                                <img style={{ width: "100%", height: "100%" }} src={modalIdContents.ship_image} alt="shipImage" />
                             </Modal.Body>
                             <Modal.Footer>
                                 <Button variant="secondary" onClick={handleClose}>
                                     Close
-                                            </Button>
+                                </Button>
                             </Modal.Footer>
                         </Modal>
                     </List>
                 ) : (
                         <h3>No Results to Display</h3>
                     )}
-
-
-
             </Container>
 
         </div>
