@@ -152,5 +152,6 @@ td {
 #tripListing {
   width: 100%;
   text-align: center;
-  border: solid 1px blue;
+  border: solid 6px white;
+  font-size: 25px;
 }
