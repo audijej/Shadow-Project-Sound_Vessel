@@ -142,13 +142,13 @@ function PlannedTrip() {
                             <th>End Sail Date</th>
                         </tr>
                     </thead>
-                        
-                    <tbody id="tripListing">
-                    <tr>
-                          <td>{trip.start_destination}</td>
-                          <td>{trip.end_destination}</td>
-                          <td>{trip.start_sail_date && trip.start_sail_date.split("T")[0]}</td>
-                          <td>{trip.end_sail_date && trip.end_sail_date.split("T")[0]}</td>  
+
+                    <tbody>
+                        <tr>
+                            <td>{trip.start_destination}</td>
+                            <td>{trip.end_destination}</td>
+                            <td>{trip.start_sail_date && trip.start_sail_date.split("T")[0]}</td>
+                            <td>{trip.end_sail_date && trip.end_sail_date.split("T")[0]}</td>
                         </tr>
                     </tbody>
 
@@ -182,21 +182,44 @@ function PlannedTrip() {
 
                         <Modal size="lg" show={show} onHide={handleClose}>
                             <Modal.Header closeButton>
-                                <Modal.Title>Ship Name: {modalIdContents.ship_name}</Modal.Title>
+                                <Modal.Title style={{textAlign:"right", fontSize: "30px", fontWeight: "bolder"}}>{modalIdContents.ship_name}</Modal.Title>
                             </Modal.Header>
                             <Modal.Body key={modalIdContents.main_id} value={modalIdContents}>
-                                Ship Name: {modalIdContents.ship_name}
-                                <br></br>
-                                Ship ID: {modalIdContents.ship_id}
-                                <br></br>
-                                Ship Type: {modalIdContents.ship_type_name}
-                                <br></br>
-                                Flag: {modalIdContents.flag}
-                                <br></br>
-                                Destination: {modalIdContents.destination}
-                                <br></br>
-                                Eta: {modalIdContents.eta && modalIdContents.eta.split("T")[0]}
-                                <br></br>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Ship Name:</th>
+                                            <td>{modalIdContents.ship_name}</td>
+
+                                        </tr>
+
+                                        <tr>
+                                            <th>Ship ID:</th>
+                                            <td>{modalIdContents.ship_id}</td>
+                                        </tr>
+
+                                        <tr>
+                                           <th>Ship Type:</th>
+                                           <td>{modalIdContents.ship_type_name}</td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>Flag:</th>
+                                            <td>{modalIdContents.flag}</td>
+                                        </tr>
+
+                                        <tr>
+                                           <th>Destination:</th>
+                                           <td>{modalIdContents.destination}</td>
+                                        </tr>
+
+                                        <tr>
+                                           <th>ETA:</th>
+                                           <td>{modalIdContents.eta && modalIdContents.eta.split("T")[0]}</td>
+                                        </tr>
+                                    </thead>
+                                </table>
+
                                 <img style={{ width: "100%", height: "100%" }} src={modalIdContents.ship_image} alt="shipImage" />
                             </Modal.Body>
                             <Modal.Footer>
